@@ -14,5 +14,8 @@
       "@sap/ui5-builder-webide-extension"
     ]
   },
-  "private": "true"
+  "private": "true",
+  "dependencies": {
+    "generator-easy-ui5": "^2.1.2"
+  }
 }
