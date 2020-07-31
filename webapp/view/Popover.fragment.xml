@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" height="100%" width="">
+	<Popover title="Shipment Details " class="sapUiResponsivePadding--header sapUiResponsivePadding--footer" placement="Bottom">
+		<FlexBox alignItems="Baseline" alignContent="Start">
+			<items>
+				<ObjectIdentifier xmlns="sap.m" title="Route Number" text="{RouteNo}" titleActive="fasle" id="identifier0"/>
+				<ObjectIdentifier xmlns="sap.m" title="Route Description" text="{RouteDesc}" titleActive="fasle" id="identifier1"/>
+				<ObjectIdentifier xmlns="sap.m" title="Shipment Number" text="{ShipmentNo}" titleActive="fasle" id="identifier2"/>
+				<ObjectIdentifier xmlns="sap.m" title="Truck Number" text="{TruckNo}" titleActive="fasle" id="identifier3"/>
+				<ObjectIdentifier xmlns="sap.m" title="Driver Number" text="{DriverNo}" titleActive="fasle" id="identifier4"/>
+				<ObjectIdentifier xmlns="sap.m" title="Arrival Date for Loading" text="{ArrivalDateLoading}" titleActive="fasle" id="identifier5"/>
+				<ObjectIdentifier xmlns="sap.m" title="Arrival Time for Loading" text="{ArrivalTimeLoading}" titleActive="fasle" id="identifier6"/>
+				<ObjectIdentifier xmlns="sap.m" title="Arrival Date for Offloading" text="{ArrivalDateLoadingOff}" titleActive="fasle" id="identifier7"/>
+				<ObjectIdentifier xmlns="sap.m" title="Arrival Time for Offloading" text="{ArrivalTimeLoadingOff}" titleActive="fasle" id="identifier8"/>
+				<ObjectIdentifier xmlns="sap.m" title="Rate (SAR/Lit)" text="{Rate}" titleActive="fasle" id="identifier9"/>
+			</items>
+		</FlexBox>
+	</Popover>
+</core:FragmentDefinition>

@@ -1,0 +1,100 @@
+{
+	"pages": [
+		{
+			"pageId": "companyPageId",
+			"header": "Company info",
+			"title": "Mr. Osama Al-Nuwaktha",
+			"titleUrl": "Chief Driver",
+			"icon": "sap-icon://building",
+			"description": "With over 20 years of experience in earch movement.",
+			"groups": [
+				{
+					"heading": "Contact Details",
+					"elements": [
+						{
+							"label": "Phone",
+							"value": "+966 6101 34823-0",
+							"elementType": "phone"
+						},
+						{
+							"label": "Address",
+							"value": "550 Al Tahliya, 4F, Jeddah, Kingdom of Saudi Arabia",
+							"elementType": "text"
+						}
+					]
+				},
+				{
+					"heading": "Main Contact",
+					"elements": [
+						{
+							"label": "Name",
+							"value": "Mr. Osama Al-Nuwaktha",
+							"elementType": "pageLink",
+							"pageLinkId": "companyEmployeePageId"
+						},
+						{
+							"label": "Mobile",
+							"value": "+966 6101 34823-0",
+							"elementType": "mobile"
+						},
+						{
+							"label": "Phone",
+							"value": "+966 6101 34824-0",
+							"elementType": "phone"
+						},
+						{
+							"label": "Email",
+							"value": "osama@company.com",
+							"emailSubject": "Subject",
+							"elementType": "email"
+						}
+					]
+				}
+			]
+		},
+		{
+			"pageId": "companyEmployeePageId",
+			"header": "Employee Info",
+			"title": "John Doe",
+			"icon": "sap-icon://person-placeholder",
+			"description": "Department Manager",
+			"groups": [
+				{
+					"heading": "Company",
+					"elements": [
+						{
+							"label": "Name",
+							"value": "Adventure Company",
+							"url": "http://sap.com",
+							"elementType": "link"
+						},
+						{
+							"label": "Address",
+							"value": "Sofia, Boris III, 136A"
+						},
+						{
+							"label": "Slogan",
+							"value": "Innovation through technology"
+						}
+					]
+				},
+				{
+					"heading": "Other",
+					"elements": [
+						{
+							"label": "Email",
+							"value": "john.doe@sap.com",
+							"emailSubject": "Subject",
+							"elementType": "email"
+						},
+						{
+							"label": "Phone",
+							"value": "+359 888 888 888",
+							"elementType": "mobile"
+						}
+					]
+				}
+			]
+		}
+	]
+}

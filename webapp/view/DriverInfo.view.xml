@@ -1,0 +1,35 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.kaar.ehal.eHauling_system.controller.DriverInfo">
+	<App>
+		<pages>
+			<Page title="Drivers List" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+						<Table id="idDriverTable" inset="false" items="{ path: '/DriverLossListSet' }" growing="true" growingScrollToLoad="true">
+				<headerToolbar>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://excel-attachment" press="onExport"/>
+					</OverflowToolbar>
+				</headerToolbar>
+				<columns>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="Driver Number"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="Driver Name"/>
+					</Column>
+					
+				</columns>
+				<items>
+					<ColumnListItem vAlign="Middle" type="Navigation" press="onPress">
+						<cells>
+							<Text text="{DriverNo}"/>
+							<Text text="{DriverName}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

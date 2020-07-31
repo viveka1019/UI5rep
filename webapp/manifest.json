@@ -1,0 +1,246 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "com.kaar.ehal.eHauling_system",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZPPR_ISSUANCE_SRV": {
+				"uri": "/sap/opu/odata/sap/ZPPR_ISSUANCE_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "com.kaar.ehal.eHauling_system.view.View1",
+			"type": "XML",
+			"async": true,
+			"id": "View1"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.kaar.ehal.eHauling_system.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "ZPPR_ISSUANCE_SRV",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.kaar.ehal.eHauling_system.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "TargetMain",
+					"pattern": "RouteMain",
+					"target": [
+						"TargetMain"
+					]
+				},
+				{
+					"name": "PPRIssuance",
+					"pattern": "PPRIssuance",
+					"target": [
+						"PPRIssuance"
+					]
+				},
+				{
+					"name": "Dashboard",
+					"pattern": "Dashboard",
+					"target": [
+						"Dashboard"
+					]
+				},
+				{
+					"name": "LoadedPPR",
+					"pattern": "LoadedPPR",
+					"target": [
+						"LoadedPPR"
+					]
+				},
+				{
+					"name": "ComplaintSugg",
+					"pattern": "ComplaintSugg",
+					"target": [
+						"ComplaintSugg"
+					]
+				},
+				{
+					"name": "PPRDetail",
+					"pattern": "PPRDetail",
+					"target": [
+						"PPRDetail"
+					]
+				},
+				{
+					"name": "contactInfo",
+					"pattern": "contactInfo",
+					"target": [
+						"contactInfo"
+					]
+				},
+				{
+					"name": "DriverInfo",
+					"pattern": "DriverInfo",
+					"target": [
+						"DriverInfo"
+					]
+				},
+				{
+					"name": "TruckInfo",
+					"pattern": "TruckInfo",
+					"target": [
+						"TruckInfo"
+					]
+				},
+				{
+					"name": "DriverDet",
+					"pattern": "DriverDet",
+					"target": [
+						"DriverDet"
+					]
+				},
+				{
+					"name": "TruckDet",
+					"pattern": "TruckDet",
+					"target": [
+						"TruckDet"
+					]
+				},
+				{
+					"name": "Invoices",
+					"pattern": "Invoices",
+					"target": [
+						"Invoices"
+					]
+				}
+			],
+			"targets": {
+				"TargetMain": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "View1"
+				},
+				"Dashboard": {
+					"viewType": "XML",
+					"viewName": "Dashboard",
+					"transition": "flip"
+				},
+				"PPRIssuance": {
+					"viewType": "XML",
+					"viewName": "PPRIssuance",
+					"viewLevel": 2,
+					"title": "PPR Issuance",
+					"transition": "fade"
+				},
+				"LoadedPPR": {
+					"viewType": "XML",
+					"viewName": "LoadedPPR",
+					"transition": "show"
+				},
+				"ComplaintSugg": {
+					"viewType": "XML",
+					"viewName": "ComplaintSugg"
+				},
+				"PPRDetail": {
+					"viewType": "XML",
+					"viewName": "PPRDetail"
+				},
+				"contactInfo": {
+					"viewType": "XML",
+					"viewName": "contactInfo"
+				},
+				"DriverInfo": {
+					"viewType": "XML",
+					"viewName": "DriverInfo"
+				},
+				"TruckInfo": {
+					"viewType": "XML",
+					"viewName": "TruckInfo"
+				},
+				"DriverDet": {
+					"viewType": "XML",
+					"viewName": "DriverDet"
+				},
+				"TruckDet": {
+					"viewType": "XML",
+					"viewName": "TruckDet"
+				},
+				"Invoices": {
+					"viewType": "XML",
+					"viewName": "Invoices"
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zehauling/webapp",
+		"_version": "1.1.0"
+	}
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZPPR_ISSUANCE_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="PPR_Issuance" sap:content-version="1">
+				<Key><PropertyRef Name="ShipmentNo"/></Key><Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Status" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ShipmentNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Shipment Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="TruckNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Truck Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="SealNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Seal Number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="DriverNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Driver Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="DriverName" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Driver Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ScheduledQty" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false"
+					sap:label="Scheduled Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ProductCode" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Product Code"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="ProductDesc" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Product Description"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanArDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Planned Arrival Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="PlanArTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Planned Arrival Time" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanLoDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Planned Loading Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="PlanLoTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Planned Loading Time" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanOffloadDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Planned Offloading Date"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="SendBulkPlant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sending Bulk Plant"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="RecBulkPlant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Receiving Bulk Plant"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/></EntityType>
+			<EntityType Name="ReadyToLoadChart" sap:content-version="1">
+				<Key><PropertyRef Name="Name"/></Key><Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Count" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="Count" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/></EntityType>
+			<EntityType Name="DriverList" sap:content-version="1">
+				<Key><PropertyRef Name="DriverNo"/></Key><Property Name="DriverNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Driver Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="DriverName" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Driver Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="TruckList" sap:content-version="1">
+				<Key><PropertyRef Name="TruckNo"/></Key><Property Name="TruckNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Truck Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="TruckDesc" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Truck Description"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="PerformanceChart" sap:content-version="1">
+				<Key><PropertyRef Name="Name"/></Key><Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Count" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="Count" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false"/></EntityType>
+			<EntityType Name="DriverLossList" sap:content-version="1">
+				<Key><PropertyRef Name="DriverNo"/></Key><Property Name="DriverNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Driver Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="DriverName" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Driver Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="LossPerc" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="Loss Percentage" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="DriverActVoilList" sap:content-version="1">
+				<Key><PropertyRef Name="DriverNo"/></Key><Property Name="DriverNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Driver Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="DriverName" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Driver Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ActiveTkts" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="Active Tickets count" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="TruckInspFailList" sap:content-version="1">
+				<Key><PropertyRef Name="TruckNo"/></Key><Property Name="TruckNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Truck Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/><Property Name="TruckDesc" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Truck Description"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="FailCount" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="Inspection Failure Count" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZPPR_ISSUANCE_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="PPR_IssuanceSet" EntityType="ZPPR_ISSUANCE_SRV.PPR_Issuance" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="ReadyToLoadChartSet" EntityType="ZPPR_ISSUANCE_SRV.ReadyToLoadChart" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="DriverListSet" EntityType="ZPPR_ISSUANCE_SRV.DriverList" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="TruckListSet" EntityType="ZPPR_ISSUANCE_SRV.TruckList" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="PerformanceChartSet" EntityType="ZPPR_ISSUANCE_SRV.PerformanceChart" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="DriverLossListSet" EntityType="ZPPR_ISSUANCE_SRV.DriverLossList" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="DriverActVoilListSet" EntityType="ZPPR_ISSUANCE_SRV.DriverActVoilList" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="TruckInspFailListSet" EntityType="ZPPR_ISSUANCE_SRV.TruckInspFailList" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/></EntityContainer><atom:link rel="self"
+				href="https://webidecp-s0007014130trial.dispatcher.hanatrial.ondemand.com/destinations/Kaar_S4D/sap/opu/odata/sap/ZPPR_ISSUANCE_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version"
+				href="https://webidecp-s0007014130trial.dispatcher.hanatrial.ondemand.com/destinations/Kaar_S4D/sap/opu/odata/sap/ZPPR_ISSUANCE_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,152 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" controllerName="com.kaar.ehal.eHauling_system.controller.Invoices" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Invoice Verification Process" showNavButton="true" navButtonPress="onNavBack">
+					<content>
+						<FlexBox alignItems="Start" direction="Inherit">
+							<items>
+								<ObjectAttribute text="Hauler Name : Hassan Hauler Number : 10000345" id="attribute0"/>
+							</items>
+						</FlexBox>
+						<f:SimpleForm id="Form" title="Invoice Verification" editable="false" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false" width="100%" maxContainerCols="4" adjustLabelSpan="false">
+							<f:content>
+								<VBox width="100%" direction="Column" id="vbox0">
+									<items>
+										<FlexBox alignItems="Center" alignContent="Center" justifyContent="SpaceBetween" width="inherit">
+											<items>
+												<ObjectIdentifier xmlns="sap.m" title="Invoice Number" text="0099988800" titleActive="fasle" id="identifier0"/>
+												<ObjectIdentifier xmlns="sap.m" title="Invoice Period" text="01.01.2020 To 10.12.2020" titleActive="fasle" id="identifier1"/>
+												<ObjectStatus title="Status" text="In-Progress" state="Success"/>
+											</items>
+										</FlexBox>
+										<Table noDataText="Drop column list items here and columns in the area above" id="table0" headerText="Summary By Route" items="{/summary}" width="inherit">
+											<items>
+												<ColumnListItem type="Navigation" id="item0" press="handlePopoverPress">
+													<cells>
+														<Text text="{RouteNo}" id="text3"/>
+														<Text text="{TankerType}" id="text4"/>
+														<Text text="{Rate}" id="text5"/>
+														<Text text="{ExtraRouteCost}" id="text6"/>
+														<Text text="{NoOfTrips}" id="text7"/>
+														<Text text="{Quantity}" id="text8"/>
+														<Text text="{Amount}" id="text9"/>
+														<Text text="{DetPay}" id="text10"/>
+														<Text text="{CostCenter}" id="text11"/>
+														<Text text="{CostElement}" id="text12"/>
+														<Text text="{GrossAmount}" id="text13"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+											<columns>
+												<Column id="column0">
+													<header>
+														<Label text="Route No" id="label0"/>
+													</header>
+												</Column>
+												<Column id="column1">
+													<header>
+														<Label text="Tanker type" id="label1"/>
+													</header>
+												</Column>
+												<Column id="column2">
+													<header>
+														<Label text="Rate (SR/1000ltrs)" id="label2"/>
+													</header>
+												</Column>
+												<Column id="column3">
+													<header>
+														<Label text="Extra Route Cost" id="label3"/>
+													</header>
+												</Column>
+												<Column id="column4">
+													<header>
+														<Label text="No. of Types" id="label4"/>
+													</header>
+												</Column>
+												<Column id="column5">
+													<header>
+														<Label text="Quantity (Liters)" id="label5"/>
+													</header>
+												</Column>
+												<Column id="column6">
+													<header>
+														<Label text="Amount (SAR)" id="label6"/>
+													</header>
+												</Column>
+												<Column id="column7">
+													<header>
+														<Label text="Detudction/Payment" id="label7"/>
+													</header>
+												</Column>
+												<Column id="column8">
+													<header>
+														<Label text="Cost Center" id="label8"/>
+													</header>
+												</Column>
+												<Column id="column9">
+													<header>
+														<Label text="Cost Element" id="label9"/>
+													</header>
+												</Column>
+												<Column id="column10">
+													<header>
+														<Label text="Gross Amount (SAR)" id="label10"/>
+													</header>
+												</Column>
+											</columns>
+										</Table>
+										<Table noDataText="Drop column list items here and columns in the area above" id="table1" headerText="Grand Total" items="{/total}" width="inherit">
+											<items>
+												<ColumnListItem id="T2item0" type="Active">
+													<cells>
+														<Text text="{Amount}" id="T2text3"/>
+														<Text text="{Quantity}" id="T2text4"/>
+														<Text text="{DetPay}" id="T2text5"/>
+														<Text text="{GrossAmount}" id="T2text6"/></cells>
+												</ColumnListItem>
+											</items>
+											<columns>
+												<Column id="T2column0">
+													<header>
+														<Label text="Quantity (Liters)" id="T2label0"/>
+													</header>
+												</Column>
+												<Column id="T2column1">
+													<header>
+														<Label text="Amount (SAR)" id="T2label1"/>
+													</header>
+												</Column>
+												<Column id="T2column2">
+													<header>
+														<Label text="Detection/Payment" id="T2label2"/>
+													</header>
+												</Column>
+												<Column id="T2column3">
+													<header>
+														<Label text="Gross Amount (SAR)" id="T2label3"/>
+													</header>
+												</Column>
+											</columns>
+										</Table>
+										<Label text="Remarks / Adjustments Comment : (Max. 500 Chars.)" width="100%" id="label"/>
+										<TextArea xmlns="sap.m" rows="4" id="area0" growing="true" growingMaxLines="5" cols="50" maxLength="500" tooltip="Maximum 500 Characters" width="75%" placeholder="Enter Your Remarks / Comments Here..." wrapping="Soft"/>
+									</items>
+								</VBox>
+							</f:content>
+						</f:SimpleForm>
+					</content>
+					<footer>
+						<OverflowToolbar>
+							<ToolbarSpacer/>
+							<Button text="Detuctions / Payments" type="Emphasized"/>
+							<Button text="Adjustments" type="Emphasized"/>
+							<Button text="Accept" type="Accept"/>
+							<Button text="Reject" type="Reject"/>
+						</OverflowToolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,156 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data" xmlns="sap.m" xmlns:viz="sap.viz.ui5.controls" xmlns:commons="sap.suite.ui.commons"
+	controllerName="com.kaar.ehal.eHauling_system.controller.Dashboard" xmlns:l="sap.ui.layout" xmlns:micro="sap.suite.ui.microchart"
+	class="viewPadding">
+	<Page id="oPage" title="e-Hauling Dashboard" showHeader="true" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<l:BlockLayout id="containerLayout">
+				<l:BlockLayoutRow id="row1">
+					<l:BlockLayoutCell id="cell1" width="2">
+						<commons:ChartContainer id="chartContainer" showFullScreen="true" showPersonalization="true" autoAdjustHeight="true"
+							personalizationPress="attachPersonalizationPress" contentChange="attachContentChange" title="Readiness">
+							<commons:content>
+								<commons:ChartContainerContent icon="sap-icon://line-chart" title="Grade Details" width="100%">
+									<commons:content>
+										<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" vizType="bar"
+											vizProperties="{ 
+											title : {text: 'Drivers-Trucks'}, 
+											plotArea: {colorPalette: ['#CE1126','#006C35']},
+											dataLabel:{visible:true}
+											}">
+											<viz:dataset>
+												<viz.data:FlattenedDataset data="{/ReadyToLoadChartSet}">
+													<viz.data:dimensions>
+														<viz.data:DimensionDefinition name="Drivers" value="{Name}"/>
+													</viz.data:dimensions>
+													<viz.data:measures>
+														<viz.data:MeasureDefinition name="Count" value="{Count}"/>
+													</viz.data:measures>
+												</viz.data:FlattenedDataset>
+											</viz:dataset>
+											<viz:feeds>
+												<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Count"/>
+												<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Drivers"/>
+											</viz:feeds>
+										</viz:VizFrame>
+									</commons:content>
+								</commons:ChartContainerContent>
+							</commons:content>
+						</commons:ChartContainer>
+					</l:BlockLayoutCell>
+					<l:BlockLayoutCell id="cell2" width="2">
+						<commons:ChartContainer id="chartContainer1" showFullScreen="true" showPersonalization="true" autoAdjustHeight="true"
+							personalizationPress="attachPersonalizationPress" contentChange="attachContentChange" title="Losses by Driver">
+							<commons:content>
+								<commons:ChartContainerContent icon="sap-icon://line-chart" title="Grade Details" width="100%">
+									<commons:content>
+										<!--		<viz:VizFrame id="idVizFrame1" uiConfig="{applicationSet:'fiori'}" vizType="pie" 
+											vizProperties="{
+										title : {text: 'Top 5 Losses'},
+										plotArea: {colorPalette: ['#006C35']}
+										}">
+											<viz:dataset>
+												<viz.data:FlattenedDataset data="{/DriverLossListSet}">
+													<viz.data:dimensions>
+														<viz.data:DimensionDefinition name="DriverNo" value="{DriverNo}"/>
+													</viz.data:dimensions>
+													<viz.data:measures>
+														<viz.data:MeasureDefinition name="Count" value="{LossPerc}"/>
+													</viz.data:measures>
+												</viz.data:FlattenedDataset>
+											</viz:dataset>
+											<viz:feeds>
+												<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Count"/>
+												<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="DriverNo"/>
+											</viz:feeds>
+										</viz:VizFrame> -->
+										<viz:VizFrame id="idVizFrame2" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='radar'
+										vizProperties="{
+										title : {text: 'Top 5 Losses'},
+											dataLabel:{visible:true}
+										}">
+											<viz:dataset>
+												<viz.data:FlattenedDataset data="{/DriverLossListSet}">
+													<viz.data:dimensions>
+														<viz.data:DimensionDefinition name="DriverNo" value="{DriverNo}"/>
+													</viz.data:dimensions>
+													<viz.data:measures>
+														<viz.data:MeasureDefinition name="Count" value="{LossPerc}"/>
+													</viz.data:measures>
+												</viz.data:FlattenedDataset>
+											</viz:dataset>
+											<viz:feeds>
+												<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Count"/>
+												<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="DriverNo"/>
+											</viz:feeds>
+										</viz:VizFrame>
+									</commons:content>
+								</commons:ChartContainerContent>
+							</commons:content>
+						</commons:ChartContainer>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow id="row2">
+					<l:BlockLayoutCell id="cell3" width="2">
+						<commons:ChartContainer id="chartContainer3" showFullScreen="true" showPersonalization="true" autoAdjustHeight="true"
+							personalizationPress="attachPersonalizationPress" contentChange="attachContentChange" title="e-Hauling Dashboard">
+							<commons:content>
+								<commons:ChartContainerContent icon="sap-icon://line-chart" title="Grade Details" width="100%">
+									<commons:content>
+										<viz:VizFrame id="idVizFrame3" uiConfig="{applicationSet:'fiori'}" vizType="waterfall"
+											vizProperties="{title : {text: 'Performance'}, plotArea: {colorPalette: ['#8D1B3D']},
+											dataLabel:{visible:true}}">
+											<viz:dataset>
+												<viz.data:FlattenedDataset data="{/PerformanceChartSet}">
+													<viz.data:dimensions>
+														<viz.data:DimensionDefinition name="Drivers" value="{Name}"/>
+													</viz.data:dimensions>
+													<viz.data:measures>
+														<viz.data:MeasureDefinition name="Count" value="{Count}"/>
+													</viz.data:measures>
+												</viz.data:FlattenedDataset>
+											</viz:dataset>
+											<viz:feeds>
+												<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Count"/>
+												<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Drivers"/>
+											</viz:feeds>
+										</viz:VizFrame>
+									</commons:content>
+								</commons:ChartContainerContent>
+							</commons:content>
+						</commons:ChartContainer>
+					</l:BlockLayoutCell>
+					<l:BlockLayoutCell id="cell4" width="2">
+						<commons:ChartContainer id="chartContainer4" showFullScreen="true" showPersonalization="true" autoAdjustHeight="true"
+							personalizationPress="attachPersonalizationPress" contentChange="attachContentChange" title="Truck Inspection">
+							<commons:content>
+								<commons:ChartContainerContent icon="sap-icon://line-chart" title="Grade Details" width="100%">
+									<commons:content>
+										<viz:VizFrame id="idVizFrame4" uiConfig="{applicationSet:'fiori'}" vizType="column"
+											vizProperties="{title : {text: 'Inspection Failure'}, plotArea: {colorPalette: ['#E6EE5F']},
+											dataLabel:{visible:true} }">
+											<viz:dataset>
+												<viz.data:FlattenedDataset data="{/TruckInspFailListSet}">
+													<viz.data:dimensions>
+														<viz.data:DimensionDefinition name="TruckNo" value="{TruckNo}"/>
+													</viz.data:dimensions>
+													<viz.data:measures>
+														<viz.data:MeasureDefinition name="Count" value="{FailCount}"/>
+													</viz.data:measures>
+												</viz.data:FlattenedDataset>
+											</viz:dataset>
+											<viz:feeds>
+												<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Count"/>
+												<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="TruckNo"/>
+											</viz:feeds>
+										</viz:VizFrame>
+									</commons:content>
+								</commons:ChartContainerContent>
+							</commons:content>
+						</commons:ChartContainer>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+			</l:BlockLayout>
+		</content>
+	</Page>
+</mvc:View>

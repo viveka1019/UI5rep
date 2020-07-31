@@ -1,0 +1,32 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.kaar.ehal.eHauling_system.controller.TruckInfo">
+	<App>
+		<pages><Page title="Truck Information" showNavButton="true" navButtonPress="onNavBack">
+				<content>	<Table id="idTruckTable" inset="false" items="{ path: '/TruckListSet' }" growing="true" growingScrollToLoad="true">
+				<headerToolbar>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://excel-attachment" press="onExport"/>
+					</OverflowToolbar>
+				</headerToolbar>
+				<columns>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="Truck Number"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Text text="Description"/>
+					</Column>
+					
+				</columns>
+				<items>
+					<ColumnListItem vAlign="Middle" type="Navigation" press="onPress">
+						<cells>
+							<Text text="{TruckNo}"/>
+							<Text text="{TruckDesc}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table></content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

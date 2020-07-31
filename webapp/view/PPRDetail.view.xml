@@ -1,0 +1,56 @@
+<mvc:View xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.kaar.ehal.eHauling_system.controller.PPRDetail">
+	<App>
+		<pages>
+			<Page title="PPR Details" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="SimpleFormDisplay354wideDual" editable="false" layout="ResponsiveGridLayout" title="PPR Issuance" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+							<f:content>
+								<Label text="Hauler Name"/>
+								<Text id="nameText" text="Hassan Al-Hassan"/>
+								<Label text="Hauler No"/>
+								<Text text="10000213"/>
+								<core:Title text="Information"/>
+								<Label text="Tracking Number"/>
+								<Input id="trackno" showValueHelp="true" width="200px"/>
+								<Label text="Driver Number"/>
+								<Input id="driverNo" showValueHelp="true" width="200px"/>
+								<Label text="Driver Name"/>
+								<Text id="countryText" text=""/>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="SimpleFormDisplay480_Trial" editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="2" columnsM="2" singleContainerFullSize="false">
+							<f:content>
+								<core:Title text="Shipment Details"/>
+								<Label text="Status"/>
+								<ObjectStatus id="nameText1" icon="sap-icon://status-negative"/>
+								<Label text="Seal Number"/>
+								<Text text=""/>
+								<Label text="Sending Bulk Plant"/>
+								<Text text="Abha Bulk Plant"/>
+								<Label text="Receiving Bulk Plant"/>
+								<Text text="As Sulayil Bulk Plant"/>
+								<core:Title/>
+								<Label text="Pincode"/>
+								<Text text="A-381"/>
+								<Label text="Scheduled Quantity"/>
+								<Text text="40,000.000"/>
+								<Label text="Planned Arrival Date"/>
+								<Text text="08.15.2020"/>
+								<Label text="Planned Arrival Time"/>
+								<Text/>
+								<core:Title/>
+								<Label text="**All Quantities are in Litres."/>
+								<Text text=""/>
+								<Label text="Date Format MM DD YYYY"/>
+								<Text text=""/>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

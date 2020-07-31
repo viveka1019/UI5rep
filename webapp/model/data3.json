@@ -1,0 +1,100 @@
+{
+	"pages": [
+		{
+			"pageId": "companyPageId",
+			"header": "Company info",
+			"title": "Mercedes Benz 6-Wheeler",
+			"titleUrl": "New vehicle with 1000 Kms",
+			"icon": "sap-icon://building",
+			"description": "New vehicle with upto date insurance, well maintenance and no violation",
+			"groups": [
+				{
+					"heading": "Vehicle Information",
+					"elements": [
+						{
+							"label": "Truck No",
+							"value": "سيب ABH 2343",
+							"elementType": "phone"
+						},
+						{
+							"label": "Chasis No",
+							"value": "ADCCF234NM45M3Tr",
+							"elementType": "text"
+						}
+					]
+				},
+				{
+					"heading": "Vehicle Details",
+					"elements": [
+						{
+							"label": "Model",
+							"value": "Mercedes Benz Truck",
+							"elementType": "pageLink",
+							"pageLinkId": "companyEmployeePageId"
+						},
+						{
+							"label": "Model",
+							"value": "2019",
+							"elementType": "mobile"
+						},
+						{
+							"label": "Violation",
+							"value": "No violation",
+							"elementType": "phone"
+						},
+						{
+							"label": "Owner Name",
+							"value": "Mr.Osama Al-Nuwaktha",
+							"emailSubject": "Subject",
+							"elementType": "email"
+						}
+					]
+				}
+			]
+		},
+		{
+			"pageId": "companyEmployeePageId",
+			"header": "Employee Info",
+			"title": "John Doe",
+			"icon": "sap-icon://person-placeholder",
+			"description": "Department Manager",
+			"groups": [
+				{
+					"heading": "Company",
+					"elements": [
+						{
+							"label": "Name",
+							"value": "Adventure Company",
+							"url": "http://sap.com",
+							"elementType": "link"
+						},
+						{
+							"label": "Address",
+							"value": "Sofia, Boris III, 136A"
+						},
+						{
+							"label": "Slogan",
+							"value": "Innovation through technology"
+						}
+					]
+				},
+				{
+					"heading": "Other",
+					"elements": [
+						{
+							"label": "Email",
+							"value": "john.doe@sap.com",
+							"emailSubject": "Subject",
+							"elementType": "email"
+						},
+						{
+							"label": "Phone",
+							"value": "+359 888 888 888",
+							"elementType": "mobile"
+						}
+					]
+				}
+			]
+		}
+	]
+}

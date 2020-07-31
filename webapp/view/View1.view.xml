@@ -1,0 +1,66 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.kaar.ehal.eHauling_system.controller.View1"   displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Dashboard" subheader="e-Hauling KPI's" press="generateDash" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://survey"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="PPR Issuance" subheader="Issue PPR" press="linkIssuePR" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://chain-link"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Loaded PPR's" subheader="List of Loaded PPR's" press="loadedPPR" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://sap-box"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Not Printed PPR's" subheader="List of Not Printed PPR's" press="manageSurvey" size="Responsive">
+						<TileContent footerColor="Critical">
+							<ImageContent src="sap-icon://manager-insight"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Scheduled PPR's" subheader="PPR's in schedule" press="addQas" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://add-process"/>
+						</TileContent>
+					</GenericTile>
+					
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Completed Orders" subheader="Completed PPR's" press="addQas" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://cart-full"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Drivers" subheader="Information about Drivers" press="addDriver" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://travel-itinerary"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Trucks" subheader="Information about Trucks" press="addTruck" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://inventory"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Invoices" subheader="Verification of Invoices" press="addInvoice" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://my-sales-order"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Contact Info" subheader="Hauler Contact Info" press="addContact" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://customer-briefing"/>
+						</TileContent>
+					</GenericTile>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Complaints/Suggestion" subheader="Hauler Feedback" press="onCompSugg" size="Responsive">
+						<TileContent>
+							<ImageContent src="sap-icon://blank-tag-2"/>
+						</TileContent>
+					</GenericTile>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

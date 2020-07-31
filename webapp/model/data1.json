@@ -1,0 +1,42 @@
+{
+	"summary": [
+		{
+			"RouteNo": "54",
+			"TankerType": "AL",
+			"Rate": "60.48",
+			"ExtraRouteCost": "0.00",
+			"NoOfTrips": "2",
+			"Quantity": "76.000",
+			"Amount": "4596.48",
+			"DetPay": "0.00",
+			"CostCenter": "359726",
+			"CostElement": "704123",
+			"GrossAmount": "4596.48"
+		}
+		
+	],
+	"shipment": [
+		{
+			"RouteNo": "54",
+			"RouteDesc": "AL",
+			"ShipmentNo": "60.48",
+			"TruckNo": "0.00",
+			"DriverNo": "2",
+			"ArrivalDateLoading": "76.000",
+			"ArrivalTimeLoading": "4596.48",
+			"ArrivalDateLoadingOff": "76.000",
+			"ArrivalTimeLoadingOff": "4596.48",
+			"Rate": "4596.48"
+		}
+		
+	],
+	"total": [
+		{
+			"Quantity": "76.000",
+			"Amount": "4596.48",
+			"DetPay": "0.00",
+			"GrossAmount": "4596.48"
+		}
+		
+	]
+}

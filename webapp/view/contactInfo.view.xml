@@ -1,0 +1,5 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" controllerName="com.kaar.ehal.eHauling_system.controller.contactInfo" height="100%">
+	<Page showHeader="true" title="Hauler Information" class="sapUiContentPadding" showNavButton="true" navButtonPress="onNavBack">
+		<core:Fragment fragmentName="com.kaar.ehal.eHauling_system.view.QuickViewCard" type="XML"/>
+	</Page>
+</mvc:View>
